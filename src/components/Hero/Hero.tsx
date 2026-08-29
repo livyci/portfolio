@@ -1,13 +1,8 @@
 import { PinIcon, GithubIcon, ExternalIcon } from '../../art/icons'
-import { Underline, Arrow } from '../../art/doodles'
+import { Arrow } from '../../art/doodles'
 import { PhotoFrame } from '../PhotoFrame'
 import { profile } from '../../content/profile'
 import styles from './Hero.module.css'
-
-const SKILLS = [
-  'React', 'TypeScript', 'Django', 'Python', 'Supabase',
-  'PostgreSQL', 'Vite', 'REST APIs', 'Claude / LLMs', 'Tailwind', 'Algorithms',
-]
 
 export function Hero() {
   const github = profile.socials.find((s) => s.icon === 'github')
@@ -17,13 +12,7 @@ export function Hero() {
       <div className={`wrap ${styles.grid}`}>
         <div className={styles.copy}>
           <p className={styles.hi}>{profile.hi}</p>
-          <h1 className={styles.name}>
-            Marlene{' '}
-            <span className="underline-wrap">
-              Kuhn
-              <Underline />
-            </span>
-          </h1>
+          <h1 className={styles.name}>Marlene Kuhn</h1>
           <p className={styles.headline}>{profile.headline}</p>
           <p className={styles.sub}>{profile.subheadline}</p>
           <p className={styles.loc}>
@@ -53,16 +42,6 @@ export function Hero() {
           />
           <span className={styles.note}>that&apos;s me!</span>
           <Arrow className={styles.arrow} />
-        </div>
-      </div>
-
-      <div className={styles.strip} aria-hidden="true">
-        <div className={styles.track}>
-          {[...SKILLS, ...SKILLS].map((s, i) => (
-            <span className={styles.chip} key={i}>
-              {s}
-            </span>
-          ))}
         </div>
       </div>
     </section>

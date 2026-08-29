@@ -10,9 +10,9 @@ export function Footer() {
       <div className="wrap">
         <Reveal className={styles.card}>
           <p className={styles.eyebrow}>get in touch</p>
-          <h2>Let&apos;s make something lovely.</h2>
+          <h2>Let&apos;s work together.</h2>
           <p className={styles.lead}>
-            I&apos;m always up for a good hackathon, an internship, or just a chat about building things — come say hi.
+            I&apos;m open to internships, collaborations, and hard problems worth solving. Feel free to reach out.
           </p>
           <div className={styles.socials}>
             {profile.socials.map((s) => (

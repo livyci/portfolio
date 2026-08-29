@@ -17,7 +17,7 @@ export function Projects() {
             </span>
           </h2>
           <p className="section-lead">
-            Most of these started at a hackathon over a sleepless weekend — a few grew into real products afterwards.
+            Most of these started at a hackathon; several grew into real products afterwards.
           </p>
         </Reveal>
 

@@ -3,9 +3,9 @@ import type { Profile } from './types'
 export const profile: Profile = {
   name: 'Marlene Kuhn',
   hi: "Hi, I'm",
-  headline: 'CS student at ETH Zürich & serial hackathon winner.',
+  headline: 'CS student at ETH Zürich and serial hackathon winner.',
   subheadline:
-    'I turn messy problems into things people can actually use — usually overnight, usually at a hackathon.',
+    'I turn messy problems into products people can actually use — end to end, usually with a great team.',
   location: 'Zürich, Switzerland · Munich, Germany',
   photo: '/photos/marlene.jpg',
   socials: [

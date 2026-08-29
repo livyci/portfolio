@@ -27,7 +27,7 @@ export function Nav() {
             </a>
           ))}
           <a className={styles.cta} href="#contact" onClick={close}>
-            Say hi
+            Contact
           </a>
           <div className={styles.socialsMobile}>
             {profile.socials.map((s) => (

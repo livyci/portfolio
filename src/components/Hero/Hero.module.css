@@ -77,33 +77,6 @@
   transform: rotate(24deg) scaleX(-1);
 }
 
-/* skills marquee */
-.strip {
-  border-top: var(--hair);
-  border-bottom: var(--hair);
-  padding: 15px 0;
-  overflow: hidden;
-}
-.track {
-  display: flex;
-  gap: 12px;
-  width: max-content;
-  animation: slide 36s linear infinite;
-}
-.strip:hover .track { animation-play-state: paused; }
-@keyframes slide { to { transform: translateX(-50%); } }
-.chip {
-  white-space: nowrap;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.98rem;
-  color: var(--ink-soft);
-  background: var(--paper);
-  border: var(--hair);
-  border-radius: 999px;
-  padding: 6px 16px;
-}
-
 @media (max-width: 860px) {
   .grid {
     grid-template-columns: 1fr;
@@ -115,8 +88,4 @@
   .sub { margin-left: auto; margin-right: auto; }
   .note { left: auto; right: 6px; }
   .arrow { left: auto; right: 60px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .track { animation: none; }
 }
