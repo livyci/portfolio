@@ -1,5 +1,5 @@
 import { Reveal } from '../Reveal'
-import { Star } from '../../art/Star'
+import { Heart } from '../../art/doodles'
 import { GithubIcon, LinkedinIcon, ExternalIcon } from '../../art/icons'
 import { profile } from '../../content/profile'
 import styles from './Footer.module.css'
@@ -9,12 +9,10 @@ export function Footer() {
     <footer id="contact" className={styles.footer}>
       <div className="wrap">
         <Reveal className={styles.card}>
-          <span className={styles.bigStar}>
-            <Star face="happy" />
-          </span>
-          <h2>Let's make something lovely.</h2>
-          <p>
-            I'm always up for a good hackathon, an internship, or just a chat about building things. Come say hi ✨
+          <p className={styles.eyebrow}>get in touch</p>
+          <h2>Let&apos;s make something lovely.</h2>
+          <p className={styles.lead}>
+            I&apos;m always up for a good hackathon, an internship, or just a chat about building things — come say hi.
           </p>
           <div className={styles.socials}>
             {profile.socials.map((s) => (
@@ -28,7 +26,7 @@ export function Footer() {
         </Reveal>
 
         <p className={styles.note}>
-          Made with <span className={styles.heart}>♥</span> and far too many stars, in the Starlit style · © {new Date().getFullYear()} Marlene Kuhn
+          Made with <Heart className={styles.heart} /> by Marlene Kuhn · © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

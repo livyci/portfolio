@@ -1,78 +1,58 @@
 .grid {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 30px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
   align-items: start;
-  margin-top: 22px;
+  margin-top: 26px;
 }
 
 .bioCard {
-  background: var(--card);
-  border: var(--border);
-  border-radius: var(--wobble-c);
-  padding: 30px 32px;
-  box-shadow: var(--shadow-lg);
-  transform: rotate(-0.6deg);
+  border-left: 3px solid var(--rose);
+  padding-left: 26px;
 }
 .lead {
-  font-family: var(--font-hand);
+  font-family: var(--font-display);
+  font-weight: 600;
   font-size: 1.7rem;
-  line-height: 1.25;
+  line-height: 1.3;
   color: var(--ink);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .para {
   font-size: 1.08rem;
   margin-bottom: 14px;
+  color: var(--ink-soft);
 }
-.para:last-child {
-  margin-bottom: 0;
-}
+.para:last-child { margin-bottom: 0; }
 
 .facts {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  display: grid;
+  gap: 14px;
 }
 .fact {
   display: flex;
   gap: 15px;
   align-items: flex-start;
-  background: var(--card);
-  border: var(--border);
-  border-radius: var(--wobble-a);
-  padding: 16px 20px;
-  box-shadow: var(--shadow);
+  background: var(--paper);
+  border: var(--hair);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
   color: var(--sage-deep);
 }
-.fact:nth-child(even) {
-  transform: rotate(0.7deg);
-  border-radius: var(--wobble-b);
-  color: var(--pink-deep);
-}
-.fact:nth-child(odd) {
-  transform: rotate(-0.7deg);
-}
-.fact:nth-child(3) {
-  color: var(--gold-deep);
-}
-.factIco {
-  flex-shrink: 0;
-  width: 46px;
-  height: 46px;
-}
-.factIco svg {
-  width: 46px;
-  height: 46px;
-}
+.fact:nth-child(2) { color: var(--clay-deep); }
+.fact:nth-child(3) { color: var(--gold-deep); }
+.fact:nth-child(4) { color: var(--rose-deep); }
+.factIco { flex-shrink: 0; width: 42px; height: 42px; }
+.factIco svg { width: 42px; height: 42px; }
 .factTitle {
-  font-family: var(--font-hand);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.3rem;
-  margin: 0 0 1px;
+  font-size: 1.18rem;
+  margin: 0 0 2px;
   color: var(--ink);
 }
 .factBody {
@@ -83,7 +63,5 @@
 }
 
 @media (max-width: 860px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  .grid { grid-template-columns: 1fr; gap: 28px; }
 }

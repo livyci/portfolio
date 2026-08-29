@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Star } from '../../art/Star'
 import { GithubIcon, LinkedinIcon, MenuIcon, CloseIcon } from '../../art/icons'
 import { profile } from '../../content/profile'
 import styles from './Nav.module.css'
@@ -18,8 +17,7 @@ export function Nav() {
     <header className={styles.nav}>
       <div className={`wrap ${styles.inner}`}>
         <a href="#top" className={styles.wordmark} onClick={close}>
-          <Star face="happy" className={styles.mark} />
-          Marlene
+          Marlene<span className={styles.dot}>.</span>
         </a>
 
         <nav className={`${styles.links} ${open ? styles.open : ''}`} aria-label="Primary">
@@ -29,7 +27,7 @@ export function Nav() {
             </a>
           ))}
           <a className={styles.cta} href="#contact" onClick={close}>
-            Say hi ✨
+            Say hi
           </a>
           <div className={styles.socialsMobile}>
             {profile.socials.map((s) => (

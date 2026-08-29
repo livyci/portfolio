@@ -1,4 +1,5 @@
 import { Reveal } from '../Reveal'
+import { Underline } from '../../art/doodles'
 import { awards } from '../../content/awards'
 import type { Medal } from '../../content/types'
 import styles from './Awards.module.css'
@@ -7,17 +8,21 @@ const MEDAL: Record<Medal, string> = {
   gold: '🥇',
   silver: '🥈',
   trophy: '🏆',
-  star: '⭐',
-  spark: '✨',
+  ribbon: '🎖️',
 }
 
 export function Awards() {
   return (
-    <section id="awards">
+    <section id="awards" className="section-alt">
       <div className="wrap">
         <Reveal>
-          <p className="section-tag">the trophy shelf</p>
-          <h2 className="section-title">Awards & competitions</h2>
+          <p className="eyebrow">the trophy shelf</p>
+          <h2 className="section-title">
+            <span className="underline-wrap">
+              Awards &amp; competitions
+              <Underline />
+            </span>
+          </h2>
         </Reveal>
 
         <ol className={styles.timeline}>

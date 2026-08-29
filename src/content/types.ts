@@ -1,4 +1,4 @@
-export type Accent = 'gold' | 'pink' | 'sage' | 'lav' | 'sky'
+export type Accent = 'gold' | 'rose' | 'clay' | 'sage' | 'plum'
 
 export type IconKey =
   | 'zetlar'
@@ -29,6 +29,12 @@ export interface Project {
   event: string
   /** short award line shown as a chip, e.g. "🥇 1st overall" */
   award?: string
+  /** the team this was built with, e.g. "Team Unicorn" */
+  team?: string
+  /** path to a team photo under /public/photos — shown as a framed slot */
+  teamPhoto?: string
+  /** path to a product screenshot under /public/photos */
+  screenshot?: string
   /** one-line pitch */
   tagline: string
   /** 2–3 sentence description */
@@ -37,7 +43,7 @@ export interface Project {
   links: ProjectLink[]
 }
 
-export type Medal = 'gold' | 'silver' | 'trophy' | 'star' | 'spark'
+export type Medal = 'gold' | 'silver' | 'trophy' | 'ribbon'
 
 export interface Award {
   date: string
@@ -58,5 +64,7 @@ export interface Profile {
   headline: string
   subheadline: string
   location: string
+  /** path to a portrait under /public/photos */
+  photo?: string
   socials: Social[]
 }

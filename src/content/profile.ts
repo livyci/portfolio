@@ -7,6 +7,7 @@ export const profile: Profile = {
   subheadline:
     'I turn messy problems into things people can actually use — usually overnight, usually at a hackathon.',
   location: 'Zürich, Switzerland · Munich, Germany',
+  photo: '/photos/marlene.jpg',
   socials: [
     { label: 'GitHub', url: 'https://github.com/livyci', icon: 'github' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/marlene-kuhn', icon: 'linkedin' },

@@ -1,20 +1,12 @@
-import { Star } from '../../art/Star'
 import { PinIcon, GithubIcon, ExternalIcon } from '../../art/icons'
+import { Underline, Arrow } from '../../art/doodles'
+import { PhotoFrame } from '../PhotoFrame'
 import { profile } from '../../content/profile'
 import styles from './Hero.module.css'
 
 const SKILLS = [
-  { label: 'React', color: 'var(--sky-deep)' },
-  { label: 'TypeScript', color: 'var(--lav-deep)' },
-  { label: 'Django', color: 'var(--sage-deep)' },
-  { label: 'Python', color: 'var(--gold-deep)' },
-  { label: 'Supabase', color: 'var(--sage-deep)' },
-  { label: 'PostgreSQL', color: 'var(--sky-deep)' },
-  { label: 'Vite', color: 'var(--pink-deep)' },
-  { label: 'REST APIs', color: 'var(--gold-deep)' },
-  { label: 'Claude / LLMs', color: 'var(--lav-deep)' },
-  { label: 'Tailwind', color: 'var(--sky-deep)' },
-  { label: 'Algorithms', color: 'var(--pink-deep)' },
+  'React', 'TypeScript', 'Django', 'Python', 'Supabase',
+  'PostgreSQL', 'Vite', 'REST APIs', 'Claude / LLMs', 'Tailwind', 'Algorithms',
 ]
 
 export function Hero() {
@@ -26,7 +18,11 @@ export function Hero() {
         <div className={styles.copy}>
           <p className={styles.hi}>{profile.hi}</p>
           <h1 className={styles.name}>
-            Marlene <span className={styles.u}>Kuhn</span>
+            Marlene{' '}
+            <span className="underline-wrap">
+              Kuhn
+              <Underline />
+            </span>
           </h1>
           <p className={styles.headline}>{profile.headline}</p>
           <p className={styles.sub}>{profile.subheadline}</p>
@@ -38,7 +34,7 @@ export function Hero() {
               See my work
             </a>
             {github && (
-              <a className="btn ghost" href={github.url} target="_blank" rel="noreferrer">
+              <a className="btn" href={github.url} target="_blank" rel="noreferrer">
                 <GithubIcon /> GitHub <ExternalIcon />
               </a>
             )}
@@ -46,12 +42,17 @@ export function Hero() {
         </div>
 
         <div className={styles.art}>
-          <div className={styles.star}>
-            <Star face="excited" title="A cheerful hand-drawn star" />
-            <span className={`${styles.badge} ${styles.b1}`}>🥇 SwissHacks winner</span>
-            <span className={`${styles.badge} ${styles.b2}`}>ETH Zürich</span>
-            <span className={`${styles.badge} ${styles.b3}`}>builder</span>
-          </div>
+          <PhotoFrame
+            src={profile.photo}
+            alt="Marlene Kuhn"
+            ratio="portrait"
+            tilt={2}
+            tape
+            placeholderLabel="a photo of me"
+            className={styles.photo}
+          />
+          <span className={styles.note}>that&apos;s me!</span>
+          <Arrow className={styles.arrow} />
         </div>
       </div>
 
@@ -59,8 +60,7 @@ export function Hero() {
         <div className={styles.track}>
           {[...SKILLS, ...SKILLS].map((s, i) => (
             <span className={styles.chip} key={i}>
-              <span className={styles.dot} style={{ background: s.color }} />
-              {s.label}
+              {s}
             </span>
           ))}
         </div>

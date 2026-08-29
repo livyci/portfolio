@@ -1,0 +1,81 @@
+.frame {
+  margin: 0;
+  position: relative;
+  background: var(--paper);
+  border: var(--border);
+  border-radius: var(--r-sm);
+  padding: 10px 10px 12px;
+  box-shadow: var(--shadow);
+  transform: rotate(var(--tilt, 0deg));
+}
+
+.window {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--bg-2);
+}
+.window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.wide .window { aspect-ratio: 16 / 10; }
+.portrait .window { aspect-ratio: 4 / 5; }
+.square .window { aspect-ratio: 1 / 1; }
+
+/* empty state */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--ink-faint);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 12px,
+      rgba(188, 170, 174, 0.08) 12px 24px
+    );
+}
+.placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 2px dashed var(--ink-faint);
+  border-radius: 6px;
+}
+.phIcon { width: 40px; height: 40px; position: relative; }
+.placeholder span {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  position: relative;
+}
+
+/* washi tape */
+.tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 92px;
+  height: 26px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(224, 168, 61, 0.42);
+  border-left: 1px dashed rgba(61, 47, 53, 0.15);
+  border-right: 1px dashed rgba(61, 47, 53, 0.15);
+  z-index: 2;
+}
+
+.caption {
+  margin-top: 8px;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  line-height: 1.1;
+}

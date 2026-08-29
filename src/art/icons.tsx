@@ -107,7 +107,11 @@ function DocksBase() {
 function Starlit() {
   return (
     <Svg label="Starlit">
-      <path {...s} d="M24 6 l5 12 13 1 -10 8 3 13 -11 -7 -11 7 3 -13 -10 -8 13 -1 z" fill={soft} fillOpacity={0.4} />
+      <rect {...s} x={9} y={8} width={30} height={33} rx={5} fill={soft} fillOpacity={0.25} />
+      <path {...s} d="M15 17 l3 3 5 -6" />
+      <line {...s} x1={27} y1={17} x2={34} y2={17} />
+      <path {...s} d="M15 28 l3 3 5 -6" />
+      <line {...s} x1={27} y1={28} x2={34} y2={28} />
     </Svg>
   )
 }

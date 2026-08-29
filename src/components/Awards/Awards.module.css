@@ -1,18 +1,18 @@
 .timeline {
   list-style: none;
   position: relative;
-  max-width: 780px;
-  margin: 26px auto 0;
+  max-width: 800px;
+  margin: 30px auto 0;
   padding: 0 0 0 8px;
 }
 .timeline::before {
   content: '';
   position: absolute;
   left: 27px;
-  top: 14px;
-  bottom: 14px;
-  width: 3px;
-  background: repeating-linear-gradient(var(--ink-faint) 0 8px, transparent 8px 16px);
+  top: 16px;
+  bottom: 16px;
+  width: 2px;
+  background: repeating-linear-gradient(var(--ink-faint) 0 7px, transparent 7px 15px);
 }
 
 .item {
@@ -32,38 +32,31 @@
   border: var(--border);
   display: grid;
   place-items: center;
-  background: var(--card);
-  box-shadow: var(--shadow);
-  font-size: 1.6rem;
+  background: var(--paper);
+  box-shadow: var(--shadow-sm);
+  font-size: 1.55rem;
 }
 
 .body {
   flex: 1;
-  background: var(--card);
-  border: var(--border);
-  border-radius: var(--wobble-a);
-  padding: 14px 20px;
-  box-shadow: var(--shadow);
-}
-.item:nth-child(even) .body {
-  transform: rotate(0.5deg);
-  border-radius: var(--wobble-b);
-}
-.item:nth-child(odd) .body {
-  transform: rotate(-0.5deg);
+  background: var(--paper);
+  border: var(--hair);
+  border-radius: var(--r-md);
+  padding: 16px 22px;
+  box-shadow: var(--shadow-sm);
 }
 .date {
-  font-family: var(--font-script);
+  font-family: var(--font-hand);
   font-size: 1.25rem;
-  color: var(--pink-deep);
+  color: var(--rose-deep);
   float: right;
   margin-left: 12px;
 }
 .title {
-  font-family: var(--font-hand);
+  font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.4rem;
-  margin: 0 0 2px;
+  font-size: 1.3rem;
+  margin: 0 0 3px;
   line-height: 1.2;
 }
 .sub {
@@ -73,20 +66,8 @@
 }
 
 @media (max-width: 480px) {
-  .item {
-    gap: 14px;
-  }
-  .medal {
-    width: 46px;
-    height: 46px;
-    font-size: 1.3rem;
-  }
-  .timeline::before {
-    left: 22px;
-  }
-  .date {
-    float: none;
-    display: block;
-    margin: 0 0 2px;
-  }
+  .item { gap: 14px; }
+  .medal { width: 46px; height: 46px; font-size: 1.25rem; }
+  .timeline::before { left: 22px; }
+  .date { float: none; display: block; margin: 0 0 3px; }
 }

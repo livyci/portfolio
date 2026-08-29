@@ -11,7 +11,7 @@ export const awards: Award[] = [
     date: 'May 2026',
     title: 'Top 7 & Honorable Mention — START Hack Zürich 2026',
     subtitle: 'Built a "company brain" for case partner SIX and pitched in front of management.',
-    medal: 'spark',
+    medal: 'ribbon',
   },
   {
     date: 'May 2026',
@@ -29,12 +29,12 @@ export const awards: Award[] = [
     date: 'Sep 2025',
     title: '2nd place, first round — German National CS Competition',
     subtitle: 'Bundeswettbewerb Informatik.',
-    medal: 'star',
+    medal: 'ribbon',
   },
   {
     date: '2024',
     title: 'Winner — German Team Algorithm Competition',
     subtitle: 'National team round.',
-    medal: 'star',
+    medal: 'ribbon',
   },
 ]

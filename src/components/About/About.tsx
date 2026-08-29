@@ -1,15 +1,21 @@
 import { Reveal } from '../Reveal'
 import { FactIcon } from '../../art/icons'
+import { Underline } from '../../art/doodles'
 import { bio, facts } from '../../content/profile'
 import styles from './About.module.css'
 
 export function About() {
   return (
-    <section id="about">
+    <section id="about" className="section-alt">
       <div className="wrap">
         <Reveal>
-          <p className="section-tag">a little about me</p>
-          <h2 className="section-title">Nice to meet you 🌟</h2>
+          <p className="eyebrow">a little about me</p>
+          <h2 className="section-title">
+            <span className="underline-wrap">
+              Nice to meet you
+              <Underline />
+            </span>
+          </h2>
         </Reveal>
 
         <div className={styles.grid}>

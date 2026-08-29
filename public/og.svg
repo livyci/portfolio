@@ -1,40 +1,24 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <radialGradient id="b1" cx="15%" cy="12%" r="45%">
-      <stop offset="0%" stop-color="#f7d9a8"/>
-      <stop offset="100%" stop-color="#f3e7cf" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="b2" cx="88%" cy="85%" r="45%">
-      <stop offset="0%" stop-color="#efd9e4"/>
-      <stop offset="100%" stop-color="#f3e7cf" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="1200" height="630" fill="#f3e7cf"/>
-  <rect width="1200" height="630" fill="url(#b1)"/>
-  <rect width="1200" height="630" fill="url(#b2)"/>
+  <rect width="1200" height="630" fill="#faf5ef"/>
+  <rect x="24" y="24" width="1152" height="582" rx="26" fill="#fffdf9" stroke="#3d2f35" stroke-width="3"/>
 
-  <!-- star -->
-  <g transform="translate(890 250) scale(2.9) rotate(-6)">
-    <path d="M50 6 C53 6 55 8 56 11 L64 33 L88 34 C94 34 96 41 92 45 L74 60 L80 84 C82 90 76 94 71 91 L50 78 L29 91 C24 94 18 90 20 84 L26 60 L8 45 C4 41 6 34 12 34 L36 33 L44 11 C45 8 47 6 50 6 Z"
-          fill="#e8b923" stroke="#c9890c" stroke-width="3.5" stroke-linejoin="round"/>
-    <path d="M34 44 Q39 38 44 44" fill="none" stroke="#5b4636" stroke-width="3.2" stroke-linecap="round"/>
-    <path d="M56 44 Q61 38 66 44" fill="none" stroke="#5b4636" stroke-width="3.2" stroke-linecap="round"/>
-    <circle cx="30" cy="56" r="5" fill="#f3a4a4" opacity="0.8"/>
-    <circle cx="70" cy="56" r="5" fill="#f3a4a4" opacity="0.8"/>
-    <path d="M38 55 Q50 72 62 55 Q50 62 38 55 Z" fill="#5b4636"/>
+  <!-- monogram badge -->
+  <g transform="translate(910 250)">
+    <circle cx="0" cy="0" r="120" fill="#d98a94" stroke="#3d2f35" stroke-width="6"/>
+    <path d="M-52 55 L-52 -45 L0 20 L52 -45 L52 55" fill="none" stroke="#fffdf9" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 
-  <text x="96" y="250" font-family="Gaegu, Patrick Hand, cursive" font-size="112" font-weight="700" fill="#5b4636">Marlene Kuhn</text>
-  <rect x="96" y="290" width="470" height="26" rx="6" fill="#e8b923" opacity="0.85"/>
-  <text x="96" y="360" font-family="Quicksand, sans-serif" font-size="40" font-weight="700" fill="#5b4636">CS student at ETH Zürich &amp; serial hackathon winner</text>
-  <text x="96" y="430" font-family="Quicksand, sans-serif" font-size="30" font-weight="500" fill="#8a755e">A hand-drawn portfolio of things I've built · Zürich · Munich</text>
+  <text x="96" y="238" font-family="Fraunces, Georgia, serif" font-size="118" font-weight="900" fill="#3d2f35">Marlene Kuhn</text>
+  <path d="M100 262 Q 260 250 430 260 T 720 258" fill="none" stroke="#e0a83d" stroke-width="10" stroke-linecap="round"/>
+  <text x="98" y="342" font-family="Fraunces, Georgia, serif" font-size="40" font-weight="600" fill="#3d2f35">CS student at ETH Zürich &amp; serial hackathon winner</text>
+  <text x="98" y="404" font-family="Nunito, sans-serif" font-size="29" font-weight="500" fill="#7a6a6f">A portfolio of things I've built · Zürich · Munich</text>
 
-  <g font-family="Gaegu, cursive" font-size="30" font-weight="700" fill="#5b4636">
-    <rect x="96" y="480" width="230" height="56" rx="28" fill="#fffaf0" stroke="#5b4636" stroke-width="3"/>
-    <text x="128" y="517">🥇 SwissHacks 1st</text>
-    <rect x="346" y="480" width="150" height="56" rx="28" fill="#fffaf0" stroke="#5b4636" stroke-width="3"/>
-    <text x="374" y="517">✨ SIX Top 7</text>
-    <rect x="516" y="480" width="210" height="56" rx="28" fill="#fffaf0" stroke="#5b4636" stroke-width="3"/>
-    <text x="548" y="517">🏆 ePA-CC winner</text>
+  <g font-family="Nunito, sans-serif" font-size="27" font-weight="800" fill="#3d2f35">
+    <rect x="98" y="470" width="250" height="56" rx="28" fill="#fffdf9" stroke="#3d2f35" stroke-width="3"/>
+    <text x="128" y="507">🥇 SwissHacks 1st</text>
+    <rect x="366" y="470" width="168" height="56" rx="28" fill="#fffdf9" stroke="#3d2f35" stroke-width="3"/>
+    <text x="392" y="507">🎖️ SIX Top 7</text>
+    <rect x="552" y="470" width="232" height="56" rx="28" fill="#fffdf9" stroke="#3d2f35" stroke-width="3"/>
+    <text x="580" y="507">🏆 ePA-CC winner</text>
   </g>
 </svg>

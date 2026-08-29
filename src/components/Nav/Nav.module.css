@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  backdrop-filter: blur(6px);
-  background: rgba(243, 231, 207, 0.8);
-  border-bottom: 2.5px dashed var(--ink-faint);
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border-bottom: var(--hair);
 }
 
 .inner {
@@ -16,21 +16,14 @@
 }
 
 .wordmark {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 1.7rem;
-  letter-spacing: 0.5px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
   color: var(--ink);
   text-decoration: none;
 }
-.mark {
-  width: 30px;
-  height: 30px;
-  transform: rotate(-8deg);
-}
+.dot { color: var(--rose-deep); }
 
 .links {
   display: flex;
@@ -40,36 +33,36 @@
 }
 .links > a {
   font-family: var(--font-body);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.98rem;
   color: var(--ink-soft);
   text-decoration: none;
-  padding: 7px 13px;
-  border-radius: 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
   transition: color 0.15s, background 0.15s;
 }
 .links > a:hover {
   color: var(--ink);
-  background: rgba(255, 250, 240, 0.7);
+  background: color-mix(in srgb, var(--rose) 20%, transparent);
 }
 
 .cta {
   border: var(--border);
   background: var(--gold);
   color: var(--ink) !important;
-  border-radius: var(--wobble-a);
-  box-shadow: 3px 4px 0 rgba(91, 70, 54, 0.18);
-  transform: rotate(-1.5deg);
-  margin-left: 6px;
+  border-radius: 999px;
+  margin-left: 8px;
+  transition: transform 0.14s, box-shadow 0.14s;
 }
 .cta:hover {
   background: var(--gold) !important;
-  transform: rotate(-1.5deg) translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .socials {
   display: flex;
-  gap: 4px;
+  gap: 2px;
   align-items: center;
 }
 .socials a {
@@ -78,21 +71,16 @@
   width: 38px;
   height: 38px;
   color: var(--ink);
-  border-radius: 12px;
+  border-radius: 10px;
   transition: background 0.15s, transform 0.15s;
 }
 .socials a:hover {
-  background: rgba(255, 250, 240, 0.7);
+  background: color-mix(in srgb, var(--rose) 20%, transparent);
   transform: translateY(-1px);
 }
-.socials svg {
-  width: 22px;
-  height: 22px;
-}
+.socials svg { width: 21px; height: 21px; }
 
-.socialsMobile {
-  display: none;
-}
+.socialsMobile { display: none; }
 
 .burger {
   display: none;
@@ -102,10 +90,7 @@
   padding: 6px;
   color: var(--ink);
 }
-.burger svg {
-  width: 30px;
-  height: 30px;
-}
+.burger svg { width: 30px; height: 30px; }
 
 @media (max-width: 780px) {
   .links {
@@ -117,51 +102,31 @@
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
-    background: var(--card);
+    background: var(--paper);
     border-bottom: var(--border);
     box-shadow: var(--shadow);
-    padding: 12px 22px 18px;
+    padding: 12px 24px 18px;
   }
-  .links.open {
-    display: flex;
-  }
-  .links > a {
-    padding: 12px 12px;
-    font-size: 1.05rem;
-  }
-  .cta {
-    margin-left: 0;
-    text-align: center;
-    transform: none;
-    margin-top: 4px;
-  }
-  .cta:hover {
-    transform: translateY(-1px);
-  }
-  .socials {
-    display: none;
-  }
+  .links.open { display: flex; }
+  .links > a { padding: 12px; font-size: 1.05rem; }
+  .cta { margin-left: 0; text-align: center; margin-top: 4px; }
+  .socials { display: none; }
   .socialsMobile {
     display: flex;
     gap: 10px;
     margin-top: 10px;
     padding-top: 12px;
-    border-top: 2px dashed var(--ink-faint);
+    border-top: var(--hair);
   }
   .socialsMobile a {
     display: grid;
     place-items: center;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     color: var(--ink);
     border: var(--border);
-    border-radius: 12px;
+    border-radius: 10px;
   }
-  .socialsMobile svg {
-    width: 22px;
-    height: 22px;
-  }
-  .burger {
-    display: block;
-  }
+  .socialsMobile svg { width: 22px; height: 22px; }
+  .burger { display: block; }
 }
