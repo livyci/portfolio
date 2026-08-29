@@ -1,0 +1,44 @@
+/* ============================================================
+   Design tokens — hand-painted / pastel, borrowed from Starlit
+   ============================================================ */
+:root {
+  /* paper + ink */
+  --bg: #f3e7cf;
+  --bg-blob1: #f7d9a8;
+  --bg-blob2: #e9d3b3;
+  --bg-blob3: #efd9e4;
+  --card: #fffaf0;
+  --ink: #5b4636;
+  --ink-soft: #8a755e;
+  --ink-faint: #b6a389;
+
+  /* accents */
+  --gold: #e8b923;
+  --gold-deep: #c9890c;
+  --pink: #f3a4a4;
+  --pink-deep: #d97a86;
+  --sage: #9bb38f;
+  --sage-deep: #6f9163;
+  --lav: #b9a9d6;
+  --lav-deep: #8a76b3;
+  --sky: #9dc3d4;
+  --sky-deep: #5f97ad;
+
+  /* wobbly hand-drawn radii */
+  --wobble-a: 235px 16px 255px 18px / 16px 255px 18px 235px;
+  --wobble-b: 18px 235px 16px 255px / 235px 18px 255px 16px;
+  --wobble-c: 255px 18px 235px 20px / 18px 235px 22px 255px;
+
+  /* offset "sketch" shadows (no blur) */
+  --shadow: 4px 5px 0 rgba(91, 70, 54, 0.16);
+  --shadow-lg: 6px 8px 0 rgba(91, 70, 54, 0.18);
+  --shadow-sm: 2px 3px 0 rgba(91, 70, 54, 0.13);
+
+  /* fonts */
+  --font-body: 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-hand: 'Gaegu', 'Patrick Hand', cursive;
+  --font-script: 'Caveat', cursive;
+
+  --maxw: 1080px;
+  --border: 2.5px solid var(--ink);
+}

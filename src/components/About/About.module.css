@@ -1,0 +1,89 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 22px;
+}
+
+.bioCard {
+  background: var(--card);
+  border: var(--border);
+  border-radius: var(--wobble-c);
+  padding: 30px 32px;
+  box-shadow: var(--shadow-lg);
+  transform: rotate(-0.6deg);
+}
+.lead {
+  font-family: var(--font-hand);
+  font-size: 1.7rem;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.para {
+  font-size: 1.08rem;
+  margin-bottom: 14px;
+}
+.para:last-child {
+  margin-bottom: 0;
+}
+
+.facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fact {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: var(--card);
+  border: var(--border);
+  border-radius: var(--wobble-a);
+  padding: 16px 20px;
+  box-shadow: var(--shadow);
+  color: var(--sage-deep);
+}
+.fact:nth-child(even) {
+  transform: rotate(0.7deg);
+  border-radius: var(--wobble-b);
+  color: var(--pink-deep);
+}
+.fact:nth-child(odd) {
+  transform: rotate(-0.7deg);
+}
+.fact:nth-child(3) {
+  color: var(--gold-deep);
+}
+.factIco {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+}
+.factIco svg {
+  width: 46px;
+  height: 46px;
+}
+.factTitle {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 0 0 1px;
+  color: var(--ink);
+}
+.factBody {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
